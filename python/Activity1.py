@@ -1,0 +1,11 @@
+# Activity 1
+
+# Using Python:
+
+# Write a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that they will turn 100 years old.
+
+username= input("Enter your name: ")
+age= int(input("Enter your age: "))
+year = str((2026-age)+100)
+print("will be turn 100 years old in the year " + year)
