@@ -1,0 +1,20 @@
+package RestAssured;
+import static io.restassured.RestAssured.given;
+import org.testng.annotations.Test;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class DELETE {
+    // Set Base URL
+final static String ROOT_URI = "https://petstore.swagger.io/v2/pet";
+
+@Test
+public void AddNewPet() {
+    Response response = 
+        given().contentType(ContentType.JSON) // Set headers
+        .when().delete(ROOT_URI + "/2758"); // Send DELETE request
+
+    String body = response.getBody().asPrettyString();
+    System.out.println(body);
+}
+}
